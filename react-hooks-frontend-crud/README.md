@@ -1,5 +1,16 @@
 # Getting Started with Create React App
 
+npx create-react-app react-hooks-frontend-crud
+cd react-hooks-frontend-crud
+npm start
+
+
+cd react-hooks-frontend-crud
+npm install bootstrap --save
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
