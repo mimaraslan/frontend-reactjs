@@ -8,9 +8,9 @@ function App() {
           Hello React
         </p>
 
-<button type="button" class="btn btn-dark">Dark</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-dark">O</button>
+<button type="button" class="btn btn-danger">Gemi</button>
+<button type="button" class="btn btn-warning">Gelecek</button>
 
       </header>
     </div>
