@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import EmployeeService from '../services/EmployeeService'
 
 const ListEmployeeComponent = () => {
@@ -31,6 +32,7 @@ const ListEmployeeComponent = () => {
     return (
         <div className = "container">
             <h2 className = "text-center"> List Employees </h2>
+            <Link to="/add-employee" className="btn btn-primary mb-2">Add New</Link>
             <table className="table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -45,7 +47,7 @@ const ListEmployeeComponent = () => {
                     {
                         employees.map(
                             employee =>
-                            <tr key = {employee.id}> 
+                            <tr key = {employee.id}>
                                 <td> {employee.id} </td>
                                 <td> {employee.firstName} </td>
                                 <td>{employee.lastName}</td>
