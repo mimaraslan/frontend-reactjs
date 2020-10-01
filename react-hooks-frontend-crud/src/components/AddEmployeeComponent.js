@@ -1,15 +1,22 @@
 import React, { useState } from 'react'
+import EmployeeService from '../services/EmployeeService'
+import {Link, useNavigate, useParams } from 'react-router-dom';
 
 const AddEmployeeComponent = () => {
 
 const [firstName, setFirstName] = useState('')
 const [lastName, setLastName] = useState('')
 const [emailId, setEmailId] = useState('')
-
+const navigate = useNavigate()
 const saveEmployee = (e) => {
   e.preventDefault();
   const employee = {firstName, lastName, emailId}
-  console.log(employee);
+  EmployeeService.createEmployee(employee).then((response)=>{
+    console.log(response.data)
+    navigate('/employees')
+  }).catch(error => {
+    console.log(error)
+  })
 }
 
   return (
@@ -54,7 +61,8 @@ const saveEmployee = (e) => {
                       >
                     </input>
                   </div>
-                  <button className="btn- btn-success" onClick={(e) => saveEmployee(e)}> Submit</button>
+                  <button className="btn btn-success" onClick={(e) => saveEmployee(e)}> Submit</button>
+                  <Link to ="/employees" className="btn btn-danger">Cancel</Link>               
                 </form>
               </div>
             </div>
